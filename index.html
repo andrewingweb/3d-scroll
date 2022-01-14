@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3d scroll scene</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="center">
+      <img src="./img/1a.jpeg" /><img src="./img/2a.png" /><img
+        src="./img/3a.png"
+      />
+      <div class="box-shadow"></div>
+      <div class="logo">Andrew's World</div>
+      <h2 class="header">Laxey Beach</h2>
+
+      <div class="whatever"><b></b><span></span></div>
+    </div>
+    <section>
+      <div class="blog">
+        <div class="post">
+          <div class="title">The limits of our success</div>
+          <div class="text">
+            For although a man is judged by his actions, by what he has said and
+            done, a man judges himself by what he is willing to do, by what he
+            might have said, or might have done – a judgment that is necessarily
+            hampered, not only by the scope and limits of his imagination, but
+            by the ever-changing measure of his doubt and self-esteem.
+          </div>
+        </div>
+        <img src="./img/jump.jpeg" alt="" />
+      </div>
+    </section>
+    <!-- todo use clip-path-->
+    <script>
+      function onScroll(event) {
+        document
+          .querySelector(".center")
+          .style.setProperty("--y", `${-window.scrollY}px`);
+        document
+          .querySelector("section")
+          .style.setProperty("--y", `${-window.scrollY}px`);
+      }
+
+      window.addEventListener("scroll", onScroll, {
+        capture: false,
+        passive: true,
+      });
+    </script>
+  </body>
+</html>

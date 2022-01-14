@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    width: 100vw;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    background-color: #000;
+  }
+  .center {
+    width: 100vw;
+    overflow: hidden;
+    --y: 0px;
+  }
+  .center img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    will-change: transform;
+  }
+  .center img:nth-child(1) {
+    position: relative;
+  }
+  .center img:nth-child(2) {
+    transform: translateY(calc(var(--y) * 0.8));
+  }
+  .center img:nth-child(3) {
+    transform: translateY(calc(var(--y) * 1.2));
+    border-bottom: calc(var(--y) * -1.21) solid #000;
+  }
+  .center .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    color: #fff;
+  }
+  .center .header {
+    position: absolute;
+    top: 25vw;
+    left: 50%;
+    font-size: calc(20px + 6vw);
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    transform: translate(-50%, calc(var(--y) * 0.6));
+    will-change: transform;
+  }
+  .center .box-shadow {
+    position: absolute;
+    width: 100%;
+    box-shadow: 0px 0px 50px 30px #000;
+    transform: translateY(calc(var(--y) * 1.2));
+    will-change: transform;
+  }
+  .center .whatever {
+    position: absolute;
+    top: 55vw;
+    left: 20px;
+    color: #fff;
+    transform: translateY(calc(var(--y) * 1.2));
+    will-change: transform;
+  }
+  .center .whatever b {
+    font-size: 2em;
+  }
+  .center .whatever span {
+    opacity: 0.6;
+  }
+  .button.sign {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #333;
+    color: #fff;
+    font-weight: 300;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  section {
+    --y: 0px;
+    transform: translateY(calc(var(--y) * 0.8));
+    will-change: transform;
+  }
+  .blog {
+    display: flex;
+    align-items: flex-start;
+    width: 100vw;
+    height: 300px;
+    color: #fff;
+    padding: 50px 3vw;
+  }
+  .blog .post {
+    padding: 0 30px;
+  }
+  .blog .title {
+    margin-bottom: 20px;
+    font-size: calc(20px + 1vw);
+  }
+  .blog .text {
+    font-size: calc(10px + 1vw);
+  }
+  .blog img {
+    width: calc(100px + 20vw);
+    max-width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  
